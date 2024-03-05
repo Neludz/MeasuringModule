@@ -199,12 +199,6 @@ void print_process(void)
     // int32_t ADC_Val;
     if (Timer_Is_Expired(print_delay))
     {
-//        for(uint32_t i = 0; i<ADC1_CHANNELS_COUNT; i++)
-//        {
-//            ADC_Val=(uint16_t)IO_getADCval(i, ADC1_CHANNELS_COUNT, adc1_data);
-//            adc1_value[i]=ADC_Val;
-//        }
-// voltage_filtering =(uint16_t)IO_getADCval(ADC2_VOLTAGE_CHANNEL_POSITION, ADC2_CHANNELS_COUNT, adc2_data);
         count_2 = adc_iteration_count - count_1;
         count_1 = adc_iteration_count;
         print_delay = Main_Timer_Set(SYSTIMER_MS_TO_TICK(1000));
