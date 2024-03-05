@@ -1,0 +1,791 @@
+# depslib dependency file v1.0
+1703595516 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\startup_stm32g431xx.s
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_adc.c
+	"stm32g4xx_hal.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal.h
+	"stm32g4xx_hal_conf.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_conf.h
+	"stm32g4xx_hal_rcc.h"
+	"stm32g4xx_hal_gpio.h"
+	"stm32g4xx_hal_dma.h"
+	"stm32g4xx_hal_cortex.h"
+	"stm32g4xx_hal_adc.h"
+	"stm32g4xx_hal_comp.h"
+	"stm32g4xx_hal_cordic.h"
+	"stm32g4xx_hal_crc.h"
+	"stm32g4xx_hal_cryp.h"
+	"stm32g4xx_hal_dac.h"
+	"stm32g4xx_hal_exti.h"
+	"stm32g4xx_hal_fdcan.h"
+	"stm32g4xx_hal_flash.h"
+	"stm32g4xx_hal_fmac.h"
+	"stm32g4xx_hal_hrtim.h"
+	"stm32g4xx_hal_irda.h"
+	"stm32g4xx_hal_iwdg.h"
+	"stm32g4xx_hal_i2c.h"
+	"stm32g4xx_hal_i2s.h"
+	"stm32g4xx_hal_lptim.h"
+	"stm32g4xx_hal_nand.h"
+	"stm32g4xx_hal_nor.h"
+	"stm32g4xx_hal_opamp.h"
+	"stm32g4xx_hal_pcd.h"
+	"stm32g4xx_hal_pwr.h"
+	"stm32g4xx_hal_qspi.h"
+	"stm32g4xx_hal_rng.h"
+	"stm32g4xx_hal_rtc.h"
+	"stm32g4xx_hal_sai.h"
+	"stm32g4xx_hal_smartcard.h"
+	"stm32g4xx_hal_smbus.h"
+	"stm32g4xx_hal_spi.h"
+	"stm32g4xx_hal_sram.h"
+	"stm32g4xx_hal_tim.h"
+	"stm32g4xx_hal_uart.h"
+	"stm32g4xx_hal_usart.h"
+	"stm32g4xx_hal_wwdg.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_rcc.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_rcc_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_def.h
+	"stm32g4xx.h"
+	"stm32_hal_legacy.h"
+	<stddef.h>
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\inc\stm32g4xx.h
+	"stm32g431xx.h"
+	"stm32g441xx.h"
+	"stm32g471xx.h"
+	"stm32g473xx.h"
+	"stm32g483xx.h"
+	"stm32g474xx.h"
+	"stm32g484xx.h"
+	"stm32gbk1cb.h"
+	"stm32g491xx.h"
+	"stm32g4a1xx.h"
+	"stm32g4xx_hal.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\inc\stm32g431xx.h
+	"core_cm4.h"
+	"system_stm32g4xx.h"
+	<stdint.h>
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\cmsis\core_cm4.h
+	<stdint.h>
+	"cmsis_version.h"
+	"cmsis_compiler.h"
+	"mpu_armv7.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\cmsis\cmsis_version.h
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\cmsis\cmsis_compiler.h
+	<stdint.h>
+	"cmsis_armcc.h"
+	"cmsis_armclang_ltm.h"
+	"cmsis_armclang.h"
+	"cmsis_gcc.h"
+	<cmsis_iccarm.h>
+	<cmsis_ccs.h>
+	<cmsis_csm.h>
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\cmsis\cmsis_gcc.h
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\cmsis\mpu_armv7.h
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\inc\system_stm32g4xx.h
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32_hal_legacy.h
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_rcc_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_gpio.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_gpio_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_gpio_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_dma.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_dma_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_dma_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_cortex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_adc.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_ll_adc.h"
+	"stm32g4xx_hal_adc_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_adc.h
+	"stm32g4xx.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_adc_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_comp.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_ll_exti.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_exti.h
+	"stm32g4xx.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_cordic.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_crc.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_crc_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_crc_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_cryp.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_cryp_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_cryp_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_dac.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_dac_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_dac_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_exti.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_fdcan.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_flash.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_flash_ex.h"
+	"stm32g4xx_hal_flash_ramfunc.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_flash_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_flash_ramfunc.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_fmac.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_hrtim.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_irda.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_irda_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_irda_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_iwdg.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_i2c.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_i2c_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_i2c_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_i2s.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_lptim.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_nand.h
+	"stm32g4xx_ll_fmc.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_fmc.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_nor.h
+	"stm32g4xx_ll_fmc.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_opamp.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_opamp_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_opamp_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_pcd.h
+	"stm32g4xx_ll_usb.h"
+	"stm32g4xx_hal_pcd_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_usb.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_pcd_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_pwr.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_pwr_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_pwr_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_qspi.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_rng.h
+	"stm32g4xx_hal_def.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_rtc.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_rtc_ex.h"
+
+1703595516 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_rtc_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_sai.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_sai_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_sai_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_smartcard.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_smartcard_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_smartcard_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_smbus.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_spi.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_spi_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_spi_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_sram.h
+	"stm32g4xx_ll_fmc.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_tim.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_tim_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_tim_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_uart.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_uart_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_uart_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_usart.h
+	"stm32g4xx_hal_def.h"
+	"stm32g4xx_hal_usart_ex.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_usart_ex.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\hal\inc\stm32g4xx_hal_wwdg.h
+	"stm32g4xx_hal_def.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_adc_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_comp.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_cordic.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_cortex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_crc.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_crc_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_cryp.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_cryp_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_dac.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_dac_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_dma.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_dma_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_exti.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_fdcan.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_flash.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_flash_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_flash_ramfunc.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_fmac.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_gpio.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_hrtim.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_i2c.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_i2c_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_i2s.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_irda.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_iwdg.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_lptim.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_nand.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_nor.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_opamp.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_opamp_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_pcd.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_pcd_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_pwr.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_pwr_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_qspi.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_rcc.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_rcc_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_rng.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_rtc.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_rtc_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_sai.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_sai_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_smartcard.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_smartcard_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_smbus.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_spi.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_spi_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_sram.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_tim.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_tim_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_uart.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_uart_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_usart.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_usart_ex.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal_wwdg.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_adc.c
+	"stm32g4xx_ll_adc.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_bus.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_comp.c
+	"stm32g4xx_ll_comp.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_comp.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_cordic.c
+	"stm32g4xx_ll_cordic.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_cordic.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_crc.c
+	"stm32g4xx_ll_crc.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_crc.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_crs.c
+	"stm32g4xx_ll_crs.h"
+	"stm32g4xx_ll_bus.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_crs.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_dac.c
+	"stm32g4xx_ll_dac.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_dac.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_dma.c
+	"stm32g4xx_ll_dma.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_dma.h
+	"stm32g4xx.h"
+	"stm32g4xx_ll_dmamux.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_dmamux.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_exti.c
+	"stm32g4xx_ll_exti.h"
+	"stm32_assert.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_fmac.c
+	"stm32g4xx_ll_fmac.h"
+	"stm32g4xx_ll_bus.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_fmac.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_fmc.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_gpio.c
+	"stm32g4xx_ll_gpio.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_gpio.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_hrtim.c
+	"stm32g4xx_ll_hrtim.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_hrtim.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_i2c.c
+	"stm32g4xx_ll_i2c.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_i2c.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_lptim.c
+	"stm32g4xx_ll_lptim.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_lptim.h
+	"stm32g4xx.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_rcc.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_lpuart.c
+	"stm32g4xx_ll_lpuart.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_lpuart.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_opamp.c
+	"stm32g4xx_ll_opamp.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_opamp.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_pwr.c
+	"stm32g4xx_ll_pwr.h"
+	"stm32g4xx_ll_bus.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_pwr.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_rcc.c
+	"stm32g4xx_ll_rcc.h"
+	"stm32_assert.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_rng.c
+	"stm32g4xx_ll_rng.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_rng.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_rtc.c
+	"stm32g4xx_ll_rtc.h"
+	"stm32g4xx_ll_cortex.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_rtc.h
+	"stm32g4xx.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_cortex.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_spi.c
+	"stm32g4xx_ll_spi.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_spi.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_tim.c
+	"stm32g4xx_ll_tim.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_tim.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_ucpd.c
+	"stm32g4xx_ll_ucpd.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_ucpd.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_usart.c
+	"stm32g4xx_ll_usart.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_usart.h
+	"stm32g4xx.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_usb.c
+	"stm32g4xx_hal.h"
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\ll\src\stm32g4xx_ll_utils.c
+	"stm32g4xx_ll_utils.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_system.h"
+	"stm32g4xx_ll_pwr.h"
+	"stm32_assert.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_utils.h
+	"stm32g4xx.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_system.h
+	"stm32g4xx.h"
+
+1703595593 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\ebmon.c
+	"ebmon.h"
+
+1703595593 d:\dropbox\gg\smtn\code\dc_measuring_module\src\ebmon.h
+	<stdint.h>
+	<stdio.h>
+
+1703595517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\hal\src\stm32g4xx_hal.c
+	"stm32g4xx_hal.h"
+
+1703595516 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\system_stm32g4xx.c
+	"stm32g4xx.h"
+
+1708497798 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.c
+	"main.h"
+	<stdio.h>
+	<string.h>
+	"clock_g431.h"
+	"IO_stm32g431.h"
+	"math.h"
+	"counter.h"
+
+1705065911 d:\dropbox\gg\smtn\code\dc_measuring_module\inc\main.h
+	"stm32g4xx_ll_conf.h"
+	<stdint.h>
+	<stdbool.h>
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_conf.h
+	"stm32g4xx.h"
+	"stm32g4xx_ll_adc.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_comp.h"
+	"stm32g4xx_ll_cordic.h"
+	"stm32g4xx_ll_cortex.h"
+	"stm32g4xx_ll_crc.h"
+	"stm32g4xx_ll_crs.h"
+	"stm32g4xx_ll_dac.h"
+	"stm32g4xx_ll_dma.h"
+	"stm32g4xx_ll_dmamux.h"
+	"stm32g4xx_ll_exti.h"
+	"stm32g4xx_ll_fmac.h"
+	"stm32g4xx_ll_fmc.h"
+	"stm32g4xx_ll_gpio.h"
+	"stm32g4xx_ll_hrtim.h"
+	"stm32g4xx_ll_i2c.h"
+	"stm32g4xx_ll_iwdg.h"
+	"stm32g4xx_ll_lptim.h"
+	"stm32g4xx_ll_lpuart.h"
+	"stm32g4xx_ll_opamp.h"
+	"stm32g4xx_ll_pwr.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_rng.h"
+	"stm32g4xx_ll_rtc.h"
+	"stm32g4xx_ll_spi.h"
+	"stm32g4xx_ll_system.h"
+	"stm32g4xx_ll_tim.h"
+	"stm32g4xx_ll_ucpd.h"
+	"stm32g4xx_ll_usart.h"
+	"stm32g4xx_ll_usb.h"
+	"stm32g4xx_ll_utils.h"
+	"stm32g4xx_ll_wwdg.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_iwdg.h
+	"stm32g4xx.h"
+
+1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_wwdg.h
+	"stm32g4xx.h"
+
+1704898589 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c
+	"clock_g431.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_system.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_pwr.h"
+	"stm32g4xx.h"
+	"main.h"
+
+1708162596 d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.h
+
+1708344344 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.c
+	"clock_g431.h"
+	"IO_stm32g431.h"
+	"stm32g4xx_ll_rcc.h"
+	"stm32g4xx_ll_system.h"
+	"stm32g4xx_ll_bus.h"
+	"stm32g4xx_ll_pwr.h"
+	"stm32g4xx_ll_usart.h"
+	"stm32g4xx.h"
+	"main.h"
+	<stdio.h>
+	<string.h>
+
+1709557282 d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.h
+	<stdint.h>
+	<stdbool.h>
+	"stm32g4xx.h"
+
+1708497798 d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.h
+	"stm32g4xx_ll_conf.h"
+	<stdint.h>
+	<stdbool.h>
+
+1706364019 d:\dropbox\gg\smtn\code\dc_measuring_module\src\counter.h
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+
+1707314136 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\counter.c
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+	"stm32g4xx.h"
+	"counter.h"
+	"clock_g431.h"
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="cmsis\core_cm4.h" open="0" top="0" tabpos="42" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6576" topLine="190" />
+		</Cursor>
+	</File>
+	<File name="inc\stm32g431xx.h" open="0" top="0" tabpos="41" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115382" topLine="1605" />
+		</Cursor>
+	</File>
+	<File name="inc\stm32g4xx.h" open="0" top="0" tabpos="40" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5396" topLine="66" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_adc.h" open="0" top="0" tabpos="51" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115648" topLine="1200" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_bus.h" open="0" top="0" tabpos="37" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9081" topLine="435" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_dma.h" open="0" top="0" tabpos="50" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="89461" topLine="1969" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_gpio.h" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1143" topLine="953" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_pwr.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10773" topLine="302" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_rcc.h" open="0" top="0" tabpos="45" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="36320" topLine="641" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_rtc.h" open="0" top="0" tabpos="47" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="126899" topLine="3083" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_system.h" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="54202" topLine="1247" />
+		</Cursor>
+	</File>
+	<File name="LL\Inc\stm32g4xx_ll_usart.h" open="0" top="0" tabpos="33" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="171152" topLine="4101" />
+		</Cursor>
+	</File>
+	<File name="LL\Src\stm32g4xx_ll_adc.c" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="605" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="LL\Src\stm32g4xx_ll_utils.c" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="22791" topLine="517" />
+		</Cursor>
+	</File>
+	<File name="src\clock_g431.c" open="0" top="0" tabpos="46" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1129" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="src\clock_g431.h" open="0" top="0" tabpos="52" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="649" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\counter.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="673" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\counter.h" open="0" top="0" tabpos="48" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="227" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ebmon.h" open="0" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\IO_stm32g431.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6511" topLine="332" />
+		</Cursor>
+	</File>
+	<File name="src\IO_stm32g431.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2371" topLine="80" />
+		</Cursor>
+	</File>
+	<File name="src\main.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4345" topLine="78" />
+		</Cursor>
+	</File>
+	<File name="src\main.h" open="0" top="0" tabpos="40" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1560" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="src\startup_stm32g431xx.S" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3569" topLine="121" />
+		</Cursor>
+	</File>
+	<File name="src\system_stm32g4xx.c" open="0" top="0" tabpos="44" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3991" topLine="172" />
+		</Cursor>
+	</File>
+</EmBitz_layout_file>

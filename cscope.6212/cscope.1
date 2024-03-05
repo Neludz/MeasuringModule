@@ -1,0 +1,29 @@
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_DisableInstCache 14 LL_FLASH_DisableInstCache();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_DisableDataCache 18 LL_FLASH_DisableDataCache();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_EnablePrefetch 22 LL_FLASH_EnablePrefetch();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_APB2_GRP1_EnableClock 26 LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_APB1_GRP1_EnableClock 27 LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_PWR_SetRegulVoltageScaling 30 LL_PWR_SetRegulVoltageScaling(POWER_VOLTAGE);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_HSE_Enable 33 LL_RCC_HSE_Enable();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_HSE_IsReady 34 while (!LL_RCC_HSE_IsReady ())
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c defined 43 #if defined (USE_HSE)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_ConfigDomain_SYS 44 LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSE, PLLM_DIV, PLLN_MUL, PLLR_DIV);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c defined 46 #if defined (PLLP_DIV)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_ConfigDomain_ADC 47 LL_RCC_PLL_ConfigDomain_ADC(LL_RCC_PLLSOURCE_HSE, PLLM_DIV, PLLN_MUL, PLLP_DIV);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c defined 50 #if defined (PLLQ_DIV)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_ConfigDomain_48M 51 LL_RCC_PLL_ConfigDomain_48M(LL_RCC_PLLSOURCE_HSE, PLLM_DIV, PLLN_MUL, PLLQ_DIV);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_Enable 57 LL_RCC_PLL_Enable();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_EnableDomain_SYS 58 LL_RCC_PLL_EnableDomain_SYS();
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_PLL_IsReady 59 while (!LL_RCC_PLL_IsReady())
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_GetLatency 63 if (FLASH_LATENCY > LL_FLASH_GetLatency())
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_SetLatency 65 LL_FLASH_SetLatency(FLASH_LATENCY);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_GetLatency 66 while (LL_FLASH_GetLatency() != FLASH_LATENCY)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_SetAHBPrescaler 75 LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_2);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_SetSysClkSource 77 LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_GetSysClkSource 78 while (LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_PLL)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_SetAHBPrescaler 85 LL_RCC_SetAHBPrescaler(AHBCLKDIV);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_GetLatency 86 if (FLASH_LATENCY < LL_FLASH_GetLatency())
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_SetLatency 88 LL_FLASH_SetLatency(FLASH_LATENCY);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_FLASH_GetLatency 89 while (LL_FLASH_GetLatency() != FLASH_LATENCY)
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_SetAPB1Prescaler 95 LL_RCC_SetAPB1Prescaler(APB1CLKDIV);
+D:\Dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c LL_RCC_SetAPB2Prescaler 98 LL_RCC_SetAPB2Prescaler(APB2CLKDIV);
