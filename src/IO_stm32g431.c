@@ -108,21 +108,22 @@ void IO_Init(void)
     {
         IO_ConfigLine(IOs[Line]);
     }
-    IO_DMA_Init();
+
     IO_ADC_Init();
     IO_UARTC_Init();
+    IO_DMA_Init();
 }
 
 static void IO_ADC_Init(void)
 {
     uint32_t wait_loop_index = 0UL;
     int32_t i;
-    LL_RCC_SetADCClockSource(LL_RCC_ADC12_CLKSOURCE_PLL);
+    LL_RCC_SetADCClockSource(LL_RCC_ADC12_CLKSOURCE_PLL); //LL_RCC_ADC12_CLKSOURCE_SYSCLK
     LL_RCC_PLL_EnableDomain_ADC();
     LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_ADC12);
 
     LL_ADC_SetCommonClock(ADC12_COMMON, LL_ADC_CLOCK_ASYNC_DIV1);
-
+    SET_BIT(SYSCFG->CFGR1, SYSCFG_CFGR1_ANASWVDD);
     // ---------------- ADC1 ----------------
     LL_ADC_DisableDeepPowerDown(ADC1);
     LL_ADC_EnableInternalRegulator(ADC1);
@@ -139,7 +140,7 @@ static void IO_ADC_Init(void)
     LL_ADC_REG_SetOverrun(ADC1, LL_ADC_REG_OVR_DATA_OVERWRITTEN);
     LL_ADC_SetDataAlignment(ADC1, LL_ADC_DATA_ALIGN_RIGHT);
     LL_ADC_SetResolution(ADC1, LL_ADC_RESOLUTION_12B);
-    LL_ADC_REG_SetDMATransfer(ADC1, LL_ADC_REG_DMA_TRANSFER_UNLIMITED);
+    LL_ADC_REG_SetDMATransfer(ADC1, LL_ADC_REG_DMA_TRANSFER_LIMITED);//LL_ADC_REG_DMA_TRANSFER_UNLIMITED);
     LL_ADC_REG_SetSequencerLength(ADC1, (ADC1_CHANNELS_COUNT-1));
     for(i = 0; i < ADC1_CHANNELS_COUNT; i++)
     {
@@ -161,7 +162,7 @@ static void IO_ADC_Init(void)
     while (LL_ADC_IsCalibrationOnGoing(ADC1)) {}
     LL_ADC_Enable(ADC1);
     while (!LL_ADC_IsActiveFlag_ADRDY(ADC1))  {}
-    LL_ADC_REG_StartConversion(ADC1);
+   // LL_ADC_REG_StartConversion(ADC1);
     // ---------------- ADC2 ----------------
     LL_ADC_DisableDeepPowerDown(ADC2);
     LL_ADC_EnableInternalRegulator(ADC2);
@@ -178,7 +179,7 @@ static void IO_ADC_Init(void)
     LL_ADC_REG_SetOverrun(ADC2, LL_ADC_REG_OVR_DATA_OVERWRITTEN);
     LL_ADC_SetDataAlignment(ADC2, LL_ADC_DATA_ALIGN_RIGHT);
     LL_ADC_SetResolution(ADC2, LL_ADC_RESOLUTION_12B);
-    LL_ADC_REG_SetDMATransfer(ADC2, LL_ADC_REG_DMA_TRANSFER_UNLIMITED);
+    LL_ADC_REG_SetDMATransfer(ADC2, LL_ADC_REG_DMA_TRANSFER_LIMITED);
     LL_ADC_REG_SetSequencerLength(ADC2, (ADC2_CHANNELS_COUNT-1));
     for(i = 0; i < ADC2_CHANNELS_COUNT; i++)
     {
@@ -200,7 +201,7 @@ static void IO_ADC_Init(void)
     while (LL_ADC_IsCalibrationOnGoing(ADC2))  {}
     LL_ADC_Enable(ADC2);
     while (!LL_ADC_IsActiveFlag_ADRDY(ADC2))   {}
-    LL_ADC_REG_StartConversion(ADC2);
+    //LL_ADC_REG_StartConversion(ADC2);
 }
 
 void IO_UARTC_Init(void)
@@ -276,8 +277,8 @@ static void IO_DMA_Init(void)
     LL_DMA_EnableIT_TE(DMA2, LL_DMA_CHANNEL_1);
     LL_DMA_EnableIT_TC(DMA2, LL_DMA_CHANNEL_1);
     LL_DMA_EnableChannel(DMA2, LL_DMA_CHANNEL_1);
-   // NVIC_EnableIRQ(DMA2_Channel1_IRQn); /* (1) */
-   // NVIC_SetPriority(DMA2_Channel1_IRQn,1); /* (2) */
+    NVIC_EnableIRQ(DMA2_Channel1_IRQn); /* (1) */
+    NVIC_SetPriority(DMA2_Channel1_IRQn,1); /* (2) */
    // ---------------- USART2 ----------------
     LL_DMA_ConfigTransfer(DMA2, LL_DMA_CHANNEL_2, (LL_DMA_DIRECTION_MEMORY_TO_PERIPH |\
                           LL_DMA_PRIORITY_HIGH|\
@@ -293,7 +294,7 @@ static void IO_DMA_Init(void)
  LL_DMA_ConfigAddresses(DMA2, LL_DMA_CHANNEL_2, (uint32_t)&usart2_data,(uint32_t)(&(USART2->TDR)),
                            LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
 
-    LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_2, 6);
+    LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_2, 9);
     LL_DMA_EnableIT_TE(DMA2, LL_DMA_CHANNEL_2);
     LL_DMA_EnableIT_TC(DMA2, LL_DMA_CHANNEL_2);
     //LL_DMA_EnableChannel(DMA2, LL_DMA_CHANNEL_2);

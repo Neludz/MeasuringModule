@@ -8,7 +8,7 @@
 //#define USE_HSI
 //#define USE_HSI_4
 #define USE_PLL
-#define SYSCLK_FREQ             150000000U
+#define SYSCLK_FREQ             140000000U
 
 
 //#define  INSTRUCTION_CACHE_DISABLE    //default on
@@ -18,10 +18,10 @@
 //USE_HSE->/PLLM->xPLLN->/PLLR->CLK
 //                    |->/PLLP->ADC
 
-#define PLLM_DIV            LL_RCC_PLLM_DIV_2
-#define PLLN_MUL            75
+#define PLLM_DIV            LL_RCC_PLLM_DIV_1
+#define PLLN_MUL            35
 #define PLLR_DIV            LL_RCC_PLLR_DIV_2
-#define PLLP_DIV            LL_RCC_PLLP_DIV_12//6
+#define PLLP_DIV            LL_RCC_PLLP_DIV_3//12
 //#define PLLQ_DIV            LL_RCC_PLLQ_DIV_2
 
 #define FLASH_LATENCY       LL_FLASH_LATENCY_4
