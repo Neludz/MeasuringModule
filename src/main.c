@@ -6,20 +6,16 @@
 #include "math.h"
 #include "counter.h"
 //-------------------------------------------------------------------------
+#ifdef DEBUG_TARGET
 uint32_t print_delay = 0;
+#endif
 uint32_t uart_busy = 0, uart_delay = 0;
-
-int32_t  discrete_adc1_2_filter=0, discrete_adc1_2_mid=0, discrete_adc1_2_mid_filter=0;
-int32_t  discrete_adc1_2_didt_prev=0;
-int32_t Vshunt_adc1_2_mid=0, Vshunt_adc1_2_didt;
-int32_t discrete_adc2_1_volt_filt, V_adc2_1_filter;
-
-uint32_t adc_mid_delay = 0, adc_didt_delay;
-uint32_t adc_iteration_count = 0, adc_measuring_iteration_count, count_measuring;
-uint32_t  adc_busy = 0, adc_2_busy = 0;
-extern uint8_t usart2_data[];
-
-uint32_t value;
+int32_t discrete_adc1_2_filter=0, discrete_adc2_1_volt_filt=0;
+int32_t Vshunt_adc1_2_mid=0, Vshunt_adc1_2_didt, volt_adc2_1_mid;
+uint32_t adc_cur_mid_delay = 0, adc_didt_delay, adc_volt_mid_delay;
+uint32_t adc_iteration_count = 0, adc_measuring_cur_iteration_count, adc_measuring_volt_iteration_count, count_measuring;
+uint32_t  adc_1_busy = 0, adc_2_busy = 0;
+uint8_t usart2_data[UART_BUF_SIZE];
 
 const unsigned char crc_array[256] =
 {
@@ -59,18 +55,15 @@ const unsigned char crc_array[256] =
 //-------------------------------------------------------------------------
 void DMA1_Channel1_IRQHandler()
 {
-
     if (LL_DMA_IsActiveFlag_TC1(DMA1))
     {
         LL_DMA_ClearFlag_TC1(DMA1);
-        //  LL_DMA_ClearFlag_TE1(DMA1);
-        adc_busy = 0;
+        adc_1_busy = 0;
         adc_iteration_count++;
     }
     if (LL_DMA_IsActiveFlag_TE1(DMA1))
     {
         LL_DMA_ClearFlag_TE1(DMA1);
-
     }
 }
 //-------------------------------------------------------------------------
@@ -78,19 +71,15 @@ void DMA2_Channel2_IRQHandler()
 {
     if (LL_DMA_IsActiveFlag_TC2(DMA2)  )
     {
-
         LL_DMA_ClearFlag_TC2(DMA2);
-
         LL_DMA_DisableChannel(DMA2, LL_DMA_CHANNEL_2);
         uart_busy = 0;
     }
     if(LL_DMA_IsActiveFlag_TE2(DMA2))
     {
         LL_DMA_ClearFlag_TE2(DMA2);
-
         LL_DMA_DisableChannel(DMA2, LL_DMA_CHANNEL_2);
         uart_busy = 0;
-        //    test_DMA ++;
     }
 }
 //-------------------------------------------------------------------------
@@ -121,7 +110,7 @@ void uart_processing(void)
 {
     static uint32_t uart_state = 0;
     uint8_t crc;
-    uint32_t v_shunt;
+    int32_t v_shunt, v_high;
     switch (uart_state)
     {
     case 0:
@@ -140,20 +129,21 @@ void uart_processing(void)
             usart2_data[1]= (Vshunt_adc1_2_mid>>8) & 0xFF;
             usart2_data[2]= v_shunt & 0xFF;
             usart2_data[3]= (v_shunt>>8) & 0xFF;
-            usart2_data[4]= Vshunt_adc1_2_didt & 0xFF;//Vshunt_adc1_2_didt
+            usart2_data[4]= Vshunt_adc1_2_didt & 0xFF;
             usart2_data[5]= (Vshunt_adc1_2_didt>>8) & 0xFF;
 
-            V_adc2_1_filter = U_hi_ADC2_1(discrete_adc2_1_volt_filt);
-
-            usart2_data[6]= Vshunt_adc1_2_mid & 0xFF;//V_adc2_1_filter & 0xFF;
-            usart2_data[7]= (Vshunt_adc1_2_mid>>8) & 0xFF;//(V_adc2_1_filter>>8) & 0xFF;
+            v_high = U_hi_ADC2_1(discrete_adc2_1_volt_filt);
+            // test_value = (Vshunt_adc1_2_didt * 200) /750;
+            usart2_data[6]= v_high & 0xFF;
+            usart2_data[7]= (v_high>>8) & 0xFF;
+            usart2_data[8]= volt_adc2_1_mid & 0xFF;
+            usart2_data[9]= (volt_adc2_1_mid>>8) & 0xFF;
             // CRC
-            crc = dallas_crc8(8, usart2_data);
-            usart2_data[8] = crc;
-            value = crc;
+            crc = dallas_crc8(10, usart2_data);
+            usart2_data[10] = crc;
             uart_busy = 1;
 
-            LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_2, 9);
+            LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_2, 11);
             LL_DMA_EnableChannel(DMA2, LL_DMA_CHANNEL_2);
         }
         break;
@@ -165,16 +155,19 @@ void uart_processing(void)
 //-------------------------------------------------------------------------
 void adc_process(void)
 {
-    static int32_t adc_state = 0, adc_intermediate = 0, adc_intermediate_v=0;
-    static int32_t adc_sum_middle = 0;
-    int32_t adc_im=0,  adc_im_v=0;
-    switch (adc_state)
+    static uint32_t adc_1_state = 0;
+    static int32_t adc_intermediate = 0, adc_intermediate_v=0, discrete_adc1_2_mid=0, discrete_adc2_1_mid=0;
+    static int32_t adc_sum_mid_cur = 0, adc_sum_mid_volt;
+    static int32_t discrete_adc1_2_didt_prev=0;
+    int32_t adc_im=0,  adc_im_v=0, delta_i;
+    //adc_1
+    switch (adc_1_state)
     {
     case 0:
-        if(!adc_busy)
+        if(!adc_1_busy)
         {
-            adc_busy = 1;
-            adc_state = 1;  //fall
+            adc_1_busy = 1;
+            adc_1_state = 1;  //fall
         }
         else
             break;
@@ -182,48 +175,76 @@ void adc_process(void)
         adc_im = IO_getADC_1_val(ADC1_1_CHANNEL_POSITION);
         adc_intermediate += (adc_im - discrete_adc1_2_filter);
         discrete_adc1_2_filter = (adc_intermediate*ADC_FILTER_RATIO_A)>>8;
-        adc_sum_middle += discrete_adc1_2_filter;
-        adc_measuring_iteration_count++;
+        adc_sum_mid_cur += discrete_adc1_2_filter;
+        adc_measuring_cur_iteration_count++;
 
         if (Timer_Is_Expired(adc_didt_delay))
         {
-            adc_didt_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_DIDT_DELAY_US));
-            Vshunt_adc1_2_didt = U_shunt_didt_ADC1_2((int32_t)(discrete_adc1_2_filter - discrete_adc1_2_didt_prev));
+            //adc_didt_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_DIDT_DELAY_US));
+            if ((discrete_adc1_2_filter > (D_REF_HALF+D_REF_DIDT_DISCRET_HYSTERESIS) && discrete_adc1_2_didt_prev > (D_REF_HALF+D_REF_DIDT_DISCRET_HYSTERESIS)) || \
+                    (discrete_adc1_2_filter < (D_REF_HALF-D_REF_DIDT_DISCRET_HYSTERESIS) && discrete_adc1_2_didt_prev < (D_REF_HALF-D_REF_DIDT_DISCRET_HYSTERESIS)))
+            {
+                delta_i = discrete_adc1_2_filter - discrete_adc1_2_didt_prev;
+                adc_didt_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_DIDT_DELAY_US));
+            }
+            else
+            {
+                delta_i = 0;
+                adc_didt_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(50));
+            }
+
+            if((discrete_adc1_2_filter > (D_REF_HALF+D_REF_DIDT_DISCRET_HYSTERESIS) && delta_i > 0)|| \
+                    (discrete_adc1_2_filter < (D_REF_HALF-10) && delta_i < 0))
+            {
+                Vshunt_adc1_2_didt = U_shunt_didt_ADC1_2(delta_i);
+            }
+            else
+            {
+                Vshunt_adc1_2_didt = 0;
+            }
             discrete_adc1_2_didt_prev = discrete_adc1_2_filter;
         }
-        if (Timer_Is_Expired(adc_mid_delay))
+        if (Timer_Is_Expired(adc_cur_mid_delay))
         {
-            adc_state = 2; //fall
+            adc_1_state = 2; //fall
         }
         else
         {
-            adc_state = 0;
+            adc_1_state = 0;
             LL_ADC_REG_StartConversion(ADC1);
             break;
         }
     case 2:
-        discrete_adc1_2_mid = adc_sum_middle / adc_measuring_iteration_count;
-         Vshunt_adc1_2_mid = (int16_t) U_shunt_ADC1_2(discrete_adc1_2_mid);
-//        adc_intermediate_mid += (discrete_adc1_2_mid - discrete_adc1_2_mid_filter);
-//        discrete_adc1_2_mid_filter = (adc_intermediate_mid*ADC_FILTER_RATIO_MID)>>8;
-        adc_sum_middle = 0;
-        count_measuring = adc_measuring_iteration_count;
-        adc_measuring_iteration_count = 0;
-        adc_mid_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_MID_DELAY_US));
-        adc_state = 0;
-        // test_DMA ++;
+        discrete_adc1_2_mid = adc_sum_mid_cur / adc_measuring_cur_iteration_count;
+        Vshunt_adc1_2_mid = (int16_t) U_shunt_ADC1_2(discrete_adc1_2_mid);
+        adc_sum_mid_cur = 0;
+        count_measuring = adc_measuring_cur_iteration_count;
+        adc_measuring_cur_iteration_count = 0;
+        adc_cur_mid_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_MID_CURRENT_DELAY_US));
+        adc_1_state = 0;
         LL_ADC_REG_StartConversion(ADC1);
         break;
 
     default :
         break;
     }
+    //adc_2
     if(!adc_2_busy)
     {
-
         adc_im_v =  IO_getADC_2_val(ADC2_VOLTAGE_CHANNEL_POSITION);
         adc_intermediate_v += (adc_im_v - discrete_adc2_1_volt_filt);
-        discrete_adc2_1_volt_filt = (adc_intermediate_v*ADC_FILTER_RATIO_V)>>8;
+        discrete_adc2_1_volt_filt = (adc_intermediate_v * ADC_FILTER_RATIO_V)>>8;
+        adc_measuring_volt_iteration_count++;
+        adc_sum_mid_volt += discrete_adc2_1_volt_filt;
+        if (Timer_Is_Expired(adc_volt_mid_delay))
+        {
+            discrete_adc2_1_mid = adc_sum_mid_volt / adc_measuring_volt_iteration_count;
+            volt_adc2_1_mid = (int16_t)U_hi_ADC2_1(discrete_adc2_1_mid);
+            adc_sum_mid_volt = 0;
+            adc_measuring_volt_iteration_count = 0;
+            LL_IWDG_ReloadCounter(IWDG);
+            adc_volt_mid_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_MID_VOLTAGE_DELAY_US));
+        }
         adc_2_busy = 1;
         LL_ADC_REG_StartConversion(ADC2);
     }
@@ -231,26 +252,83 @@ void adc_process(void)
 //-------------------------------------------------------------------------
 void print_process(void)
 {
-    static uint32_t count_1=0, count_2=0;
+    //static uint32_t count_1=0, count_2=0;
     // uint32_t adc1_value[ADC1_CHANNELS_COUNT];
     // int32_t ADC_Val;
     if (Timer_Is_Expired(print_delay))
     {
-        count_2 = adc_iteration_count - count_1;
-        count_1 = adc_iteration_count;
+//        count_2 = adc_iteration_count - count_1;
+//        count_1 = adc_iteration_count;
         print_delay = Main_Timer_Set(SYSTIMER_MS_TO_TICK(1000));
-        printf("count = %ld, count_m=%ld, V=%ld, discr_v = %ld\n", count_2, count_measuring, discrete_adc1_2_mid, discrete_adc1_2_mid_filter);
-        printf("value=%ld\n", value);
+        printf("test \n");
 
     }
 }
 //-------------------------------------------------------------------------
+void iwdg_init(uint8_t x0_1s_time)
+{
+    LL_IWDG_Enable(IWDG);
+    LL_IWDG_EnableWriteAccess(IWDG);
+    LL_IWDG_SetPrescaler(IWDG, LL_IWDG_PRESCALER_256);
+
+    LL_IWDG_SetReloadCounter(IWDG, (125 * x0_1s_time)/10);
+    while(!LL_IWDG_IsReady(IWDG))
+    {
+        // Wait reary flag
+    }
+    LL_IWDG_SetWindow(IWDG, 0x0FFF);
+    LL_IWDG_ReloadCounter(IWDG);
+}
+
+//-------------------------------------------------------------------------
+void flash_btock(void)
+{
+    uint8_t rdp_level = READ_BIT(FLASH->OPTR, FLASH_OPTR_RDP_Msk);
+    if (rdp_level != RDP_VAL)
+    {
+        if (READ_BIT(FLASH->CR, FLASH_CR_LOCK) != 0U)
+        {
+            /* Authorize the FLASH Registers access */
+            WRITE_REG(FLASH->KEYR, FLASH_KEY1);
+            WRITE_REG(FLASH->KEYR, FLASH_KEY2);
+        }
+        if (READ_BIT(FLASH->CR, FLASH_CR_OPTLOCK) != 0U)
+        {
+            /* Authorizes the Option Byte register programming */
+            WRITE_REG(FLASH->OPTKEYR, FLASH_OPTKEY1);
+            WRITE_REG(FLASH->OPTKEYR, FLASH_OPTKEY2);
+        }
+        uint32_t tmp1;
+        tmp1 = (uint32_t)(FLASH->OPTR & (~(FLASH_OPTR_RDP_Msk|FLASH_OPTR_BOR_LEV_Msk)));
+        /* Calculate the option byte to write */
+        tmp1 |= (uint32_t)((RDP_VAL) | (BOR_LEVEL << FLASH_OPTR_BOR_LEV_Pos));
+        /* Wait for last operation to be completed */
+        while((FLASH->SR) & (FLASH_SR_BSY));
+        /* program read protection level */
+        FLASH->OPTR = tmp1;
+        /* Wait for last operation to be completed */
+        while((FLASH->SR) & (FLASH_SR_BSY));
+        WRITE_REG(FLASH->CR, FLASH_CR_OPTSTRT);
+        while((FLASH->SR) & (FLASH_SR_BSY));
+        SET_BIT(FLASH->CR, FLASH_CR_LOCK);
+        while((FLASH->SR) & (FLASH_SR_BSY));
+        SET_BIT(FLASH->CR, FLASH_CR_OPTLOCK);
+
+    }
+}
+
+//-------------------------------------------------------------------------
 int main(void)
 {
+    flash_btock();
     ClockInit();
+    adc_cur_mid_delay = Main_Timer_Set(SYSTIMER_US_TO_TICK(ADC_MID_CURRENT_DELAY_US));
+    iwdg_init(IWDG_TIME_X_0_1S);
     IO_Init();
+    IO_ADC_Init();
+    IO_UART_Init();
+    IO_DMA_Init(usart2_data);
     MainTimerTickInit();
-    print_delay = Main_Timer_Set(SYSTIMER_MS_TO_TICK(400));
 #ifdef DEBUG_TARGET
     printf ( "[ INFO ] Program start now\n" );
 #endif

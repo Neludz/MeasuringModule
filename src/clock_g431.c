@@ -5,7 +5,6 @@
 #include "stm32g4xx_ll_bus.h"
 #include "stm32g4xx_ll_pwr.h"
 #include "stm32g4xx.h"
-#include "main.h"
 
 void ClockInit(void)
 {

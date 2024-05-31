@@ -6,9 +6,9 @@
 			<Cursor1 position="6576" topLine="190" />
 		</Cursor>
 	</File>
-	<File name="inc\stm32g431xx.h" open="0" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="inc\stm32g431xx.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="622508" topLine="8073" />
+			<Cursor1 position="370794" topLine="4750" />
 		</Cursor>
 	</File>
 	<File name="inc\stm32g4xx.h" open="0" top="0" tabpos="40" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -16,9 +16,9 @@
 			<Cursor1 position="5396" topLine="66" />
 		</Cursor>
 	</File>
-	<File name="LL\Inc\stm32g4xx_ll_adc.h" open="0" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="LL\Inc\stm32g4xx_ll_adc.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="313605" topLine="4231" />
+			<Cursor1 position="444871" topLine="6681" />
 		</Cursor>
 	</File>
 	<File name="LL\Inc\stm32g4xx_ll_bus.h" open="0" top="0" tabpos="37" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -26,9 +26,9 @@
 			<Cursor1 position="9081" topLine="435" />
 		</Cursor>
 	</File>
-	<File name="LL\Inc\stm32g4xx_ll_dma.h" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="LL\Inc\stm32g4xx_ll_dma.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="84259" topLine="1850" />
+			<Cursor1 position="89461" topLine="1954" />
 		</Cursor>
 	</File>
 	<File name="LL\Inc\stm32g4xx_ll_gpio.h" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -56,9 +56,9 @@
 			<Cursor1 position="54202" topLine="1247" />
 		</Cursor>
 	</File>
-	<File name="LL\Inc\stm32g4xx_ll_usart.h" open="0" top="0" tabpos="33" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="LL\Inc\stm32g4xx_ll_usart.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="171152" topLine="4101" />
+			<Cursor1 position="59953" topLine="1310" />
 		</Cursor>
 	</File>
 	<File name="LL\Src\stm32g4xx_ll_adc.c" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -71,22 +71,22 @@
 			<Cursor1 position="22791" topLine="517" />
 		</Cursor>
 	</File>
-	<File name="src\clock_g431.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\clock_g431.c" open="1" top="0" tabpos="51" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1129" topLine="34" />
+			<Cursor1 position="761" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="src\clock_g431.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\clock_g431.h" open="1" top="0" tabpos="49" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="666" topLine="3" />
+			<Cursor1 position="250" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\counter.c" open="0" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\counter.c" open="1" top="0" tabpos="53" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="624" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\counter.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\counter.h" open="0" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="254" topLine="0" />
 		</Cursor>
@@ -96,34 +96,39 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\IO_stm32g431.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="src\IO_stm32g431.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3789" topLine="110" />
+			<Cursor1 position="12349" topLine="303" />
 		</Cursor>
 	</File>
-	<File name="src\IO_stm32g431.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\IO_stm32g431.h" open="1" top="0" tabpos="50" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2280" topLine="53" />
+			<Cursor1 position="2213" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="src\main.c" open="1" top="1" tabpos="10" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7480" topLine="194" />
+			<Cursor1 position="11463" topLine="293" />
 		</Cursor>
 	</File>
-	<File name="src\main.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\main.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="858" topLine="20" />
+			<Cursor1 position="287" topLine="37" />
 		</Cursor>
 	</File>
-	<File name="src\startup_stm32g431xx.S" open="0" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\startup_stm32g431xx.S" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3569" topLine="121" />
+			<Cursor1 position="2326" topLine="62" />
 		</Cursor>
 	</File>
-	<File name="src\system_stm32g4xx.c" open="0" top="0" tabpos="44" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\system_stm32g4xx.c" open="0" top="0" tabpos="37" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3991" topLine="172" />
+		</Cursor>
+	</File>
+	<File name="stm32g431k6_flash.ld" open="1" top="0" tabpos="52" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="42" />
 		</Cursor>
 	</File>
 </EmBitz_layout_file>

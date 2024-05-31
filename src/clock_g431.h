@@ -10,7 +10,6 @@
 #define USE_PLL
 #define SYSCLK_FREQ             140000000U
 
-
 //#define  INSTRUCTION_CACHE_DISABLE    //default on
 //#define  DATA_CACHE_DISABLE           //default on
 //#define  PREFETCH_ENABLE              //default off
@@ -21,7 +20,7 @@
 #define PLLM_DIV            LL_RCC_PLLM_DIV_1
 #define PLLN_MUL            35
 #define PLLR_DIV            LL_RCC_PLLR_DIV_2
-#define PLLP_DIV            LL_RCC_PLLP_DIV_3//12
+#define PLLP_DIV            LL_RCC_PLLP_DIV_4//12
 //#define PLLQ_DIV            LL_RCC_PLLQ_DIV_2
 
 #define FLASH_LATENCY       LL_FLASH_LATENCY_4

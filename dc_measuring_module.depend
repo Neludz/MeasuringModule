@@ -687,7 +687,7 @@
 1703595516 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\system_stm32g4xx.c
 	"stm32g4xx.h"
 
-1712235538 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.c
+1717167380 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.c
 	"main.h"
 	<stdio.h>
 	<string.h>
@@ -742,18 +742,17 @@
 1703595517 d:\dropbox\gg\smtn\code\dc_measuring_module\ll\inc\stm32g4xx_ll_wwdg.h
 	"stm32g4xx.h"
 
-1704898589 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c
+1716989517 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.c
 	"clock_g431.h"
 	"stm32g4xx_ll_rcc.h"
 	"stm32g4xx_ll_system.h"
 	"stm32g4xx_ll_bus.h"
 	"stm32g4xx_ll_pwr.h"
 	"stm32g4xx.h"
-	"main.h"
 
-1712151466 d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.h
+1716991118 d:\dropbox\gg\smtn\code\dc_measuring_module\src\clock_g431.h
 
-1711971724 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.c
+1716983394 source:d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.c
 	"clock_g431.h"
 	"IO_stm32g431.h"
 	"stm32g4xx_ll_rcc.h"
@@ -766,12 +765,12 @@
 	<stdio.h>
 	<string.h>
 
-1712151466 d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.h
+1716981250 d:\dropbox\gg\smtn\code\dc_measuring_module\src\io_stm32g431.h
 	<stdint.h>
 	<stdbool.h>
 	"stm32g4xx.h"
 
-1712236315 d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.h
+1717167366 d:\dropbox\gg\smtn\code\dc_measuring_module\src\main.h
 	"stm32g4xx_ll_conf.h"
 	<stdint.h>
 	<stdbool.h>

@@ -73,12 +73,12 @@ typedef enum
 #define ADC1_NUMBER_LIST                    {ADC1_CH3_CURRENT_HIGH_CHANNEL}
 #define ADC1_1_CHANNEL_POSITION             0
 
-#define ADC1_SAMPLE_TIME                    LL_ADC_SAMPLINGTIME_2CYCLES_5//LL_ADC_SAMPLINGTIME_2CYCLES_5//LL_ADC_SAMPLINGTIME_47CYCLES_5
+#define ADC1_SAMPLE_TIME                    LL_ADC_SAMPLINGTIME_24CYCLES_5//LL_ADC_SAMPLINGTIME_2CYCLES_5//LL_ADC_SAMPLINGTIME_47CYCLES_5
 
 #define ADC2_CHANNELS_COUNT                 1
 #define	ADC2_CH3_VOLTAGE_CHANNEL            3
 #define ADC2_NUMBER_LIST                    {ADC2_CH3_VOLTAGE_CHANNEL}
-#define ADC2_SAMPLE_TIME                    LL_ADC_SAMPLINGTIME_2CYCLES_5//LL_ADC_SAMPLINGTIME_47CYCLES_5
+#define ADC2_SAMPLE_TIME                    LL_ADC_SAMPLINGTIME_24CYCLES_5//LL_ADC_SAMPLINGTIME_47CYCLES_5
 #define ADC2_VOLTAGE_CHANNEL_POSITION       0
 
 #define OPTIC_BAUDRATE              2000000
@@ -101,10 +101,13 @@ typedef enum
 
 
 void IO_Init(void);
+void IO_ADC_Init(void);
+void IO_DMA_Init(uint8_t *uart_buf_p);
+void IO_UART_Init(void);
 bool IO_GetLineActive(tIOLine Line);
-void IO_UARTC_Init();
 void IO_SetLine(tIOLine Line, bool State);
 bool IO_GetLine(tIOLine Line);
 uint16_t IO_getADC_1_val(int nch);
 uint16_t IO_getADC_2_val(int nch);
+
 #endif /* IO_STM32G431_H_INCLUDED */

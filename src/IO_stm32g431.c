@@ -11,9 +11,7 @@
 #include <string.h>
 
 //------------------------------- prototype -------------------------------------
-static void IO_ADC_Init(void);
 static void IO_ConfigLine(tGPIO_Line io);
-static void IO_DMA_Init(void);
 //--------------X macros---------------------------------------------------------
 const tGPIO_Line IOs[NUM_IO] =
 {
@@ -26,7 +24,6 @@ const uint8_t IO_ADC1_number[ADC1_CHANNELS_COUNT] = ADC1_NUMBER_LIST;
 uint16_t adc1_data[ADC1_CHANNELS_COUNT*9];
 const uint8_t IO_ADC2_number[ADC2_CHANNELS_COUNT] = ADC2_NUMBER_LIST;
 uint16_t adc2_data[ADC2_CHANNELS_COUNT*9];
-uint8_t usart2_data[16];
 //---------------------------------------------------------------------------------
 void IO_SetLine(tIOLine Line, bool State)
 {
@@ -97,7 +94,7 @@ static void IO_ConfigLine(tGPIO_Line io)
 }
 //---------------------------------------------------------------------------------
 
-void IO_Init(void)
+void IO_Init()
 {
     LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOA);
     LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
@@ -108,13 +105,9 @@ void IO_Init(void)
     {
         IO_ConfigLine(IOs[Line]);
     }
-
-    IO_ADC_Init();
-    IO_UARTC_Init();
-    IO_DMA_Init();
 }
 
-static void IO_ADC_Init(void)
+void IO_ADC_Init(void)
 {
     uint32_t wait_loop_index = 0UL;
     int32_t i;
@@ -204,7 +197,7 @@ static void IO_ADC_Init(void)
     //LL_ADC_REG_StartConversion(ADC2);
 }
 
-void IO_UARTC_Init(void)
+void IO_UART_Init(void)
 {
     LL_RCC_SetUSARTClockSource(LL_RCC_USART2_CLKSOURCE_PCLK1);
     LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_USART2);
@@ -227,10 +220,9 @@ void IO_UARTC_Init(void)
     LL_USART_Enable(USART2);
     //NVIC_SetPriority(USART2_IRQn, 1);
     //NVIC_EnableIRQ(USART2_IRQn);
-
 }
 
-static void IO_DMA_Init(void)
+void IO_DMA_Init(uint8_t *uart_buf_p)
 {
      // ---------------- DMA1 ----------------
     LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_DMAMUX1);
@@ -250,7 +242,7 @@ static void IO_DMA_Init(void)
     LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_1, LL_DMAMUX_REQ_ADC1);
 
     LL_DMA_ConfigAddresses(DMA1, LL_DMA_CHANNEL_1, (uint32_t)(&(ADC1->DR)),
-                           (uint32_t)&adc1_data, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
+                           (uint32_t)adc1_data, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
 
     LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_1, ADC1_CHANNELS_COUNT*9);
     LL_DMA_EnableIT_TE(DMA1, LL_DMA_CHANNEL_1);
@@ -271,7 +263,7 @@ static void IO_DMA_Init(void)
     LL_DMA_SetPeriphRequest(DMA2, LL_DMA_CHANNEL_1, LL_DMAMUX_REQ_ADC2);
 
     LL_DMA_ConfigAddresses(DMA2, LL_DMA_CHANNEL_1, (uint32_t)(&(ADC2->DR)),
-                           (uint32_t)&adc2_data, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
+                           (uint32_t)adc2_data, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
 
     LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_1, ADC2_CHANNELS_COUNT*9);
     LL_DMA_EnableIT_TE(DMA2, LL_DMA_CHANNEL_1);
@@ -291,7 +283,7 @@ static void IO_DMA_Init(void)
 
     LL_DMA_SetPeriphRequest(DMA2, LL_DMA_CHANNEL_2, LL_DMAMUX_REQ_USART2_TX);
 
- LL_DMA_ConfigAddresses(DMA2, LL_DMA_CHANNEL_2, (uint32_t)&usart2_data,(uint32_t)(&(USART2->TDR)),
+ LL_DMA_ConfigAddresses(DMA2, LL_DMA_CHANNEL_2, (uint32_t)uart_buf_p,(uint32_t)(&(USART2->TDR)),
                            LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
 
     LL_DMA_SetDataLength(DMA2, LL_DMA_CHANNEL_2, 9);
